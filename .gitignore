@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+sim/mekan/kayitlar/
+sim/_sahne_*.xml
+sim/_engebe_*.xml
+sim/alt_ag_*.pth
+sim/runs/
+media/my_match.mp4

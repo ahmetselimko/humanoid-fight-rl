@@ -1,0 +1,712 @@
+{
+  "id": "oda_001",
+  "tema": "sisli yaşlı orman açıklığı",
+  "stil": "yosunlu kesme taş, sisli serin hava, yaşlı ağaçlar; terk edilmiş bir dağ kalesi",
+  "aciklama": "Sisin asılı kaldığı yaşlı bir orman. Ağaçların arasındaki açıklıktan kalenin yıkık suru görünüyor.",
+  "boyut": [
+    18.1,
+    18.8,
+    9.0
+  ],
+  "mekan_turu": "acik",
+  "tavan": false,
+  "zemin": "toprak",
+  "duvar": "toprak",
+  "acik_alan": {
+    "merkez": [
+      9.05,
+      9.4
+    ],
+    "yaricap": 3.5
+  },
+  "kapilar": [
+    {
+      "id": "ileri",
+      "duvar": "kuzey",
+      "konum": 0.56,
+      "genislik": 2.6,
+      "yukseklik": 3.0,
+      "hedef": "oda_002",
+      "tur": "gedik"
+    }
+  ],
+  "objeler": [
+    {
+      "id": "yasli_agac_1",
+      "grup": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        4.78,
+        10.316
+      ]
+    },
+    {
+      "id": "yasli_agac_2",
+      "grup": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        16.663,
+        0.886
+      ]
+    },
+    {
+      "id": "yasli_agac_3",
+      "grup": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 0.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        16.265,
+        17.666
+      ]
+    },
+    {
+      "id": "yasli_agac_4",
+      "grup": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        6.986,
+        0.716
+      ]
+    },
+    {
+      "id": "yasli_agac_5",
+      "grup": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        13.431,
+        9.092
+      ]
+    },
+    {
+      "id": "yasli_agac_6",
+      "grup": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 0.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        6.541,
+        17.77
+      ]
+    },
+    {
+      "id": "genc_agac_1",
+      "grup": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "donus": 0.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        0.712,
+        3.525
+      ]
+    },
+    {
+      "id": "genc_agac_2",
+      "grup": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        0.927,
+        15.005
+      ]
+    },
+    {
+      "id": "genc_agac_3",
+      "grup": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        11.565,
+        3.831
+      ]
+    },
+    {
+      "id": "genc_agac_4",
+      "grup": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        10.446,
+        13.77
+      ]
+    },
+    {
+      "id": "genc_agac_5",
+      "grup": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        6.715,
+        5.852
+      ]
+    },
+    {
+      "id": "genc_agac_6",
+      "grup": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        17.375,
+        12.909
+      ]
+    },
+    {
+      "id": "cali_1",
+      "grup": "cali",
+      "tip": "çalı",
+      "gorunum": "çalı",
+      "sekil": "kure",
+      "boyut": [
+        1.3,
+        1.3,
+        0.9
+      ],
+      "malzeme": "bitki",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        16.31,
+        5.867
+      ]
+    },
+    {
+      "id": "cali_2",
+      "grup": "cali",
+      "tip": "çalı",
+      "gorunum": "çalı",
+      "sekil": "kure",
+      "boyut": [
+        1.3,
+        1.3,
+        0.9
+      ],
+      "malzeme": "bitki",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        1.223,
+        7.758
+      ]
+    },
+    {
+      "id": "cali_3",
+      "grup": "cali",
+      "tip": "çalı",
+      "gorunum": "çalı",
+      "sekil": "kure",
+      "boyut": [
+        1.3,
+        1.3,
+        0.9
+      ],
+      "malzeme": "bitki",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        6.677,
+        13.951
+      ]
+    },
+    {
+      "id": "kaya_1",
+      "grup": "kaya",
+      "tip": "yosunlu kaya",
+      "gorunum": "yosunlu kaya",
+      "sekil": "kure",
+      "boyut": [
+        1.6,
+        1.3,
+        0.9
+      ],
+      "malzeme": "kaya",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "kose",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        0.96,
+        17.84
+      ]
+    },
+    {
+      "id": "kaya_2",
+      "grup": "kaya",
+      "tip": "yosunlu kaya",
+      "gorunum": "yosunlu kaya",
+      "sekil": "kure",
+      "boyut": [
+        1.6,
+        1.3,
+        0.9
+      ],
+      "malzeme": "kaya",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "kose",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        17.14,
+        16.24
+      ]
+    },
+    {
+      "id": "kutuk",
+      "grup": "kutuk",
+      "tip": "devrik kütük",
+      "gorunum": "devrik kütük",
+      "sekil": "kutu",
+      "boyut": [
+        0.6,
+        3.0,
+        0.6
+      ],
+      "malzeme": "ahsap",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        12.19,
+        17.108
+      ]
+    }
+  ],
+  "isik": {
+    "tip": "gunes",
+    "renk": "#e8efe6",
+    "siddet": 3.0,
+    "ortam": 0.35
+  },
+  "_bolge": "orman",
+  "_yapi_uyarilari": [],
+  "_plan_objeler": [
+    {
+      "id": "yasli_agac",
+      "tip": "yaşlı meşe gövdesi",
+      "gorunum": "kalın, yosunlu, yaşlı meşe gövdesi ve geniş taç",
+      "sekil": "silindir",
+      "boyut": [
+        0.947720484144807,
+        0.947720484144807,
+        9.0
+      ],
+      "malzeme": "ahsap",
+      "adet": 6,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "genc_agac",
+      "tip": "genç kayın",
+      "gorunum": "ince, düz gövdeli genç kayın",
+      "sekil": "silindir",
+      "boyut": [
+        0.45,
+        0.45,
+        6.5
+      ],
+      "malzeme": "ahsap",
+      "adet": 6,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "cali",
+      "tip": "çalı",
+      "gorunum": "çalı",
+      "sekil": "kure",
+      "boyut": [
+        1.3,
+        1.3,
+        0.9
+      ],
+      "malzeme": "bitki",
+      "adet": 3,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "kaya",
+      "tip": "yosunlu kaya",
+      "gorunum": "yosunlu kaya",
+      "sekil": "kure",
+      "boyut": [
+        1.6,
+        1.3,
+        0.9
+      ],
+      "malzeme": "kaya",
+      "adet": 2,
+      "yerlesim": {
+        "tur": "kose",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "kutuk",
+      "tip": "devrik kütük",
+      "gorunum": "devrik kütük",
+      "sekil": "kutu",
+      "boyut": [
+        0.6,
+        3.0,
+        0.6
+      ],
+      "malzeme": "ahsap",
+      "adet": 1,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    }
+  ],
+  "_uyarilar": [],
+  "_elestiri": []
+}

@@ -1,0 +1,546 @@
+{
+  "id": "oda_004",
+  "tema": "terk edilmiş taş tapınak",
+  "stil": "yosunlu kesme taş, sisli serin hava, yaşlı ağaçlar; terk edilmiş bir dağ kalesi",
+  "aciklama": "Sütun halkasıyla çevrili, yarı karanlık bir taş tapınak. Doğu duvarında eski bir sunak.",
+  "boyut": [
+    17.5,
+    19.8,
+    7.0
+  ],
+  "mekan_turu": "kapali",
+  "tavan": true,
+  "zemin": "mermer",
+  "duvar": "tas",
+  "acik_alan": {
+    "merkez": [
+      8.75,
+      9.9
+    ],
+    "yaricap": 3.5
+  },
+  "kapilar": [
+    {
+      "id": "giris",
+      "duvar": "guney",
+      "konum": 0.5,
+      "genislik": 2.6,
+      "yukseklik": 2.8,
+      "hedef": "oda_003",
+      "tur": "kemer"
+    },
+    {
+      "id": "ileri",
+      "duvar": "kuzey",
+      "konum": 0.54,
+      "genislik": 2.4,
+      "yukseklik": 3.2,
+      "hedef": null,
+      "tur": "kemer"
+    }
+  ],
+  "objeler": [
+    {
+      "id": "sutun_1",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 259.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        4.566,
+        10.645
+      ]
+    },
+    {
+      "id": "sutun_2",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 289.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        4.754,
+        8.453
+      ]
+    },
+    {
+      "id": "sutun_3",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 349.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        8.005,
+        5.716
+      ]
+    },
+    {
+      "id": "sutun_4",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 19.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        10.197,
+        5.904
+      ]
+    },
+    {
+      "id": "sutun_5",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 79.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        12.934,
+        9.155
+      ]
+    },
+    {
+      "id": "sutun_6",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 109.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        12.746,
+        11.347
+      ]
+    },
+    {
+      "id": "sutun_7",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 169.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        9.495,
+        14.084
+      ]
+    },
+    {
+      "id": "sutun_8",
+      "grup": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "donus": 199.9,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        7.303,
+        13.896
+      ]
+    },
+    {
+      "id": "sunak",
+      "grup": "sunak",
+      "tip": "taş sunak",
+      "gorunum": "taş sunak",
+      "sekil": "kutu",
+      "boyut": [
+        2.4,
+        1.2,
+        1.0
+      ],
+      "malzeme": "mermer",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "dogu",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": 0.5,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        16.74,
+        9.85
+      ]
+    },
+    {
+      "id": "mangal_1",
+      "grup": "mangal",
+      "tip": "bronz mangal",
+      "gorunum": "bronz mangal",
+      "sekil": "silindir",
+      "boyut": [
+        0.6,
+        0.6,
+        1.0
+      ],
+      "malzeme": "metal",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "sunak",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        16.74,
+        11.6
+      ]
+    },
+    {
+      "id": "mangal_2",
+      "grup": "mangal",
+      "tip": "bronz mangal",
+      "gorunum": "bronz mangal",
+      "sekil": "silindir",
+      "boyut": [
+        0.6,
+        0.6,
+        1.0
+      ],
+      "malzeme": "metal",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "sunak",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        15.78,
+        11.6
+      ]
+    },
+    {
+      "id": "heykel_1",
+      "grup": "heykel",
+      "tip": "tanrı heykeli",
+      "gorunum": "tanrı heykeli",
+      "sekil": "kutu",
+      "boyut": [
+        1.0,
+        1.0,
+        3.0
+      ],
+      "malzeme": "mermer",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "bati",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        0.66,
+        13.65
+      ]
+    },
+    {
+      "id": "heykel_2",
+      "grup": "heykel",
+      "tip": "tanrı heykeli",
+      "gorunum": "tanrı heykeli",
+      "sekil": "kutu",
+      "boyut": [
+        1.0,
+        1.0,
+        3.0
+      ],
+      "malzeme": "mermer",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "bati",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        0.66,
+        5.15
+      ]
+    }
+  ],
+  "isik": {
+    "tip": "ic_mekan",
+    "renk": "#ffcf8a",
+    "siddet": 2.5,
+    "ortam": 0.25
+  },
+  "_bolge": "tapinak",
+  "_yapi_uyarilari": [],
+  "_plan_objeler": [
+    {
+      "id": "sutun",
+      "tip": "tapınak sütunu",
+      "gorunum": "yivli, yüksek mermer sütun",
+      "sekil": "kutu",
+      "boyut": [
+        0.9,
+        0.9,
+        6.8
+      ],
+      "malzeme": "mermer",
+      "adet": 8,
+      "yerlesim": {
+        "tur": "acik_alan_kenari",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "merkeze"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "sunak",
+      "tip": "taş sunak",
+      "gorunum": "taş sunak",
+      "sekil": "kutu",
+      "boyut": [
+        2.4,
+        1.2,
+        1.0
+      ],
+      "malzeme": "mermer",
+      "adet": 1,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "dogu",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": 0.5,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "mangal",
+      "tip": "bronz mangal",
+      "gorunum": "bronz mangal",
+      "sekil": "silindir",
+      "boyut": [
+        0.6,
+        0.6,
+        1.0
+      ],
+      "malzeme": "metal",
+      "adet": 2,
+      "yerlesim": {
+        "tur": "yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "sunak",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "heykel",
+      "tip": "tanrı heykeli",
+      "gorunum": "tanrı heykeli",
+      "sekil": "kutu",
+      "boyut": [
+        1.0,
+        1.0,
+        3.0
+      ],
+      "malzeme": "mermer",
+      "adet": 2,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "bati",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    }
+  ],
+  "_uyarilar": [],
+  "_elestiri": []
+}

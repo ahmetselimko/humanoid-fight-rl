@@ -1,0 +1,40 @@
+{
+ "not_": "2026-10-19 ilk dovus surumu secki: gorsel kontrolden gecen duz yumruk + on tekme. Kaynak/lisans: degerlendirme/mocap/KAYNAKLAR.md (Bandai CC BY-NC 4.0, CMU arastirma). Uretim: degerlendirme/dovus_referans.py",
+ "yumruk": [
+  "referanslar\\dovus_02_05_yumruk_0_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_1_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_2_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_3_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_4_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_5_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_6_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_7_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_8_kin.npz",
+  "referanslar\\dovus_02_05_yumruk_9_kin.npz",
+  "referanslar\\dovus_dataset-1_punch_normal_001_yumruk_0_kin.npz",
+  "referanslar\\dovus_dataset-1_punch_normal_001_yumruk_1_kin.npz",
+  "referanslar\\dovus_dataset-1_punch_normal_001_yumruk_2_kin.npz",
+  "referanslar\\dovus_dataset-1_punch_normal_001_yumruk_3_kin.npz",
+  "referanslar\\dovus_dataset-1_punch_normal_001_yumruk_4_kin.npz"
+ ],
+ "tekme": [
+  "referanslar\\dovus_86_01_tekme_4_kin.npz",
+  "referanslar\\dovus_86_01_tekme_5_kin.npz",
+  "referanslar\\dovus_86_01_tekme_6_kin.npz",
+  "referanslar\\dovus_86_06_tekme_10_kin.npz",
+  "referanslar\\dovus_86_06_tekme_8_kin.npz",
+  "referanslar\\dovus_86_06_tekme_9_kin.npz",
+  "referanslar\\dovus_dataset-1_kick_normal_001_tekme_0_kin.npz",
+  "referanslar\\dovus_dataset-1_kick_normal_001_tekme_1_kin.npz",
+  "referanslar\\dovus_dataset-1_kick_normal_001_tekme_2_kin.npz"
+ ],
+ "sicrama_ileri": [
+  "referanslar/dovus_13_11_sicrama_0_kin.npz",
+  "referanslar/dovus_16_05_sicrama_0_kin.npz",
+  "referanslar/dovus_13_13_sicrama_0_kin.npz"
+ ],
+ "sicrama_geri": [
+  "referanslar/dovus_81_12_sicrama_0_kin.npz"
+ ],
+ "not_sicrama": "2026-10-25: CMU 13_11/16_05/13_13 ileri, 81_12 geri (dovus_referans.py --tip sicrama); kök yolu SICRAMA_M'ye olceklenir"
+}

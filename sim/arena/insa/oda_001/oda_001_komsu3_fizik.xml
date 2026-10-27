@@ -1,0 +1,101 @@
+<!-- çok odalı sahne: oda_001, oda_002, oda_003, oda_004 | üretildi: mekan/arayuz.py (sözleşme v1) -->
+<mujocoinclude>
+  <!-- oda_001: kaydırma (0, 0) -->
+<geom name="mekan_oda_001_sinir_guney_0" type="box" size="9.05 0.15 1.5" pos="9.05 -0.15 1.5" quat="1 0 0 0" rgba="0 0 0 0" group="3" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_sinir_kuzey_0" type="box" size="4.418 0.15 1.5" pos="4.418 18.95 1.5" quat="1 0 0 0" rgba="0 0 0 0" group="3" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_sinir_kuzey_1" type="box" size="3.332 0.15 1.5" pos="14.768 18.95 1.5" quat="1 0 0 0" rgba="0 0 0 0" group="3" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_sinir_bati_0" type="box" size="0.15 9.7 1.5" pos="-0.15 9.4 1.5" quat="1 0 0 0" rgba="0 0 0 0" group="3" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_sinir_dogu_0" type="box" size="0.15 9.7 1.5" pos="18.25 9.4 1.5" quat="1 0 0 0" rgba="0 0 0 0" group="3" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_yasli_agac_1" type="cylinder" size="0.47386 4.5" pos="4.78 10.316 4.5" quat="-0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_yasli_agac_2" type="cylinder" size="0.47386 4.5" pos="16.663 0.886 4.5" quat="-0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_yasli_agac_3" type="cylinder" size="0.47386 4.5" pos="16.265 17.666 4.5" quat="1 0 0 0" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_yasli_agac_4" type="cylinder" size="0.47386 4.5" pos="6.986 0.716 4.5" quat="0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_yasli_agac_5" type="cylinder" size="0.47386 4.5" pos="13.431 9.092 4.5" quat="-0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_yasli_agac_6" type="cylinder" size="0.47386 4.5" pos="6.541 17.77 4.5" quat="1 0 0 0" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_genc_agac_1" type="cylinder" size="0.225 3.25" pos="0.712 3.525 3.25" quat="1 0 0 0" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_genc_agac_2" type="cylinder" size="0.225 3.25" pos="0.927 15.005 3.25" quat="6.1232e-17 0 0 1" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_genc_agac_3" type="cylinder" size="0.225 3.25" pos="11.565 3.831 3.25" quat="-0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_genc_agac_4" type="cylinder" size="0.225 3.25" pos="10.446 13.77 3.25" quat="0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_genc_agac_5" type="cylinder" size="0.225 3.25" pos="6.715 5.852 3.25" quat="0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_genc_agac_6" type="cylinder" size="0.225 3.25" pos="17.375 12.909 3.25" quat="0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_cali_1" type="sphere" size="0.65" pos="16.31 5.867 0.65" quat="-0.70711 0 0 0.70711" rgba="0.2 0.38 0.15 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_cali_2" type="sphere" size="0.65" pos="1.223 7.758 0.65" quat="0.70711 0 0 0.70711" rgba="0.2 0.38 0.15 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_cali_3" type="sphere" size="0.65" pos="6.677 13.951 0.65" quat="0.70711 0 0 0.70711" rgba="0.2 0.38 0.15 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_kaya_1" type="sphere" size="0.8" pos="0.96 17.84 0.8" quat="6.1232e-17 0 0 1" rgba="0.38 0.36 0.34 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_kaya_2" type="sphere" size="0.8" pos="17.14 16.24 0.8" quat="6.1232e-17 0 0 1" rgba="0.38 0.36 0.34 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_001_obje_kutuk" type="box" size="0.3 1.5 0.3" pos="12.19 17.108 0.3" quat="6.1232e-17 0 0 1" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <site name="mekan_baslangic_p1" type="sphere" size="0.08" pos="9.05 8.4 0" quat="0.70711 0 0 0.70711" rgba="1 0.85 0.1 0.6"/>
+  <site name="mekan_baslangic_p2" type="sphere" size="0.08" pos="9.05 10.4 0" quat="0.70711 0 0 -0.70711" rgba="1 0.85 0.1 0.6"/>
+  <site name="mekan_oda_001_acik_alan" type="cylinder" size="3.5 0.005" pos="9.05 9.4 0.005" rgba="0.2 0.9 0.3 0.15"/>
+  <site name="mekan_oda_001_kapi_ileri" type="box" size="1.3 0.25 1.5" pos="10.136 18.55 1.5" rgba="1 0.6 0.1 0.25"/>
+  <!-- oda_002: kaydırma (1.064, 19.4) -->
+<geom name="mekan_oda_002_duvar_guney_0" type="box" size="3.886 0.15 3" pos="4.95 19.25 3" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_duvar_guney_1" type="box" size="2.914 0.15 3" pos="14.35 19.25 3" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_kapi_ust_giris" type="box" size="1.3 0.15 1.5" pos="10.136 19.25 4.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_duvar_kuzey_0" type="box" size="4.029 0.15 3" pos="5.093 32.05 3" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_duvar_kuzey_1" type="box" size="2.571 0.15 3" pos="14.693 32.05 3" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_kapi_ust_ileri" type="box" size="1.5 0.15 1" pos="10.622 32.05 5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_duvar_bati_0" type="box" size="0.15 6.55 3" pos="0.914 25.65 3" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_duvar_dogu_0" type="box" size="0.15 6.55 3" pos="17.414 25.65 3" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_moloz_1" type="sphere" size="0.9" pos="7.486 20.46 0.9" quat="1 0 0 0" rgba="0.38 0.36 0.34 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_moloz_2" type="sphere" size="0.9" pos="12.786 20.46 0.9" quat="1 0 0 0" rgba="0.38 0.36 0.34 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_tas_blok_1" type="box" size="0.6 0.4 0.4" pos="1.661 30.971 0.4" quat="-0.70711 0 0 0.70711" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_tas_blok_2" type="box" size="0.6 0.4 0.4" pos="14.749 31.074 0.4" quat="6.1232e-17 0 0 1" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_tas_blok_3" type="box" size="0.6 0.4 0.4" pos="2.291 24.419 0.4" quat="6.1232e-17 0 0 1" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_tas_blok_4" type="box" size="0.6 0.4 0.4" pos="7.855 29.35 0.4" quat="0.70711 0 0 0.70711" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_mesale_1" type="box" size="0.15 0.15 0.3" pos="12.722 31.59 2.5" quat="6.1232e-17 0 0 1" rgba="0.55 0.56 0.58 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_mesale_2" type="box" size="0.15 0.15 0.3" pos="8.522 31.59 2.5" quat="6.1232e-17 0 0 1" rgba="0.55 0.56 0.58 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_kalkan_rafi" type="box" size="0.8 0.25 0.8" pos="16.854 25.1 2.4" quat="0.70711 0 0 0.70711" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_varil_1" type="cylinder" size="0.4 0.5" pos="16.704 19.96 0.5" quat="1 0 0 0" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_002_obje_varil_2" type="cylinder" size="0.4 0.5" pos="2.624 31.34 0.5" quat="6.1232e-17 0 0 1" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <site name="mekan_oda_002_acik_alan" type="cylinder" size="3 0.005" pos="9.164 25.65 0.005" rgba="0.2 0.9 0.3 0.15"/>
+  <site name="mekan_oda_002_kapi_giris" type="box" size="1.3 0.25 1.5" pos="10.136 19.65 1.5" rgba="1 0.6 0.1 0.25"/>
+  <site name="mekan_oda_002_kapi_ileri" type="box" size="1.5 0.25 2" pos="10.622 31.65 2" rgba="1 0.6 0.1 0.25"/>
+  <!-- oda_003: kaydırma (0.179, 32.5) -->
+<geom name="mekan_oda_003_duvar_guney_0" type="box" size="4.4715 0.15 1.1" pos="4.6505 32.35 1.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_duvar_guney_1" type="box" size="2.8785 0.15 1.1" pos="15.001 32.35 1.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_duvar_kuzey_0" type="box" size="3.775 0.15 1.1" pos="3.954 50.05 1.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_duvar_kuzey_1" type="box" size="3.775 0.15 1.1" pos="14.104 50.05 1.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_duvar_bati_0" type="box" size="0.15 9 1.1" pos="0.029 41.2 1.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_duvar_dogu_0" type="box" size="0.15 9 1.1" pos="18.029 41.2 1.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kirik_sutun_1" type="cylinder" size="0.35 1.2652" pos="12.646 43.234 1.2652" quat="0.50453 0 0 0.8634" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kirik_sutun_2" type="cylinder" size="0.35 1.2652" pos="9.076 45.35 1.2652" quat="0.005236 0 0 0.99999" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kirik_sutun_3" type="cylinder" size="0.35 1.2652" pos="5.459 43.316 1.2652" quat="-0.49546 0 0 0.86863" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kirik_sutun_4" type="cylinder" size="0.35 1.2652" pos="5.412 39.166 1.2652" quat="-0.8634 0 0 0.50453" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kirik_sutun_5" type="cylinder" size="0.35 1.2652" pos="8.982 37.05 1.2652" quat="-0.99999 0 0 0.005236" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kirik_sutun_6" type="cylinder" size="0.35 1.2652" pos="12.599 39.084 1.2652" quat="0.86863 0 0 0.49546" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_kuyu" type="cylinder" size="0.85 0.5" pos="16.869 33.51 0.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_yikik_duvar_1" type="box" size="1.3 0.3 0.65" pos="2.353 48.984 0.65" quat="6.1232e-17 0 0 1" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_yikik_duvar_2" type="box" size="1.3 0.3 0.65" pos="16.39 49.171 0.65" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_avlu_agaci" type="cylinder" size="0.35 3.5" pos="0.689 33.01 3.5" quat="1 0 0 0" rgba="0.45 0.3 0.17 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_003_obje_heykel" type="box" size="0.45 0.45 1.2" pos="0.789 35.6 1.2" quat="-0.70711 0 0 0.70711" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <site name="mekan_oda_003_acik_alan" type="cylinder" size="3.5 0.005" pos="9.029 41.2 0.005" rgba="0.2 0.9 0.3 0.15"/>
+  <site name="mekan_oda_003_kapi_giris" type="box" size="1.5 0.25 1.4" pos="10.622 32.75 1.4" rgba="1 0.6 0.1 0.25"/>
+  <site name="mekan_oda_003_kapi_ileri" type="box" size="1.3 0.25 1.4" pos="9.029 49.65 1.4" rgba="1 0.6 0.1 0.25"/>
+  <!-- oda_004: kaydırma (0.279, 50.5) -->
+<geom name="mekan_oda_004_duvar_guney_0" type="box" size="3.725 0.15 3.5" pos="4.004 50.35 3.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_duvar_guney_1" type="box" size="3.725 0.15 3.5" pos="14.054 50.35 3.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_kapi_ust_giris" type="box" size="1.3 0.15 2.1" pos="9.029 50.35 4.9" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_duvar_kuzey_0" type="box" size="4.125 0.15 3.5" pos="4.404 70.45 3.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_duvar_kuzey_1" type="box" size="3.425 0.15 3.5" pos="14.354 70.45 3.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_kapi_ust_ileri" type="box" size="1.2 0.15 1.9" pos="9.729 70.45 5.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_duvar_bati_0" type="box" size="0.15 10.2 3.5" pos="0.129 60.4 3.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_duvar_dogu_0" type="box" size="0.15 10.2 3.5" pos="17.929 60.4 3.5" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_tavan" type="box" size="9.05 10.2 0.1" pos="9.029 60.4 7.1" quat="1 0 0 0" rgba="0.52 0.5 0.47 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_1" type="box" size="0.45 0.45 3.4" pos="4.845 61.145 3.4" quat="-0.64212 0 0 0.76661" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_2" type="box" size="0.45 0.45 3.4" pos="5.033 58.953 3.4" quat="-0.81865 0 0 0.57429" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_3" type="box" size="0.45 0.45 3.4" pos="8.284 56.216 3.4" quat="-0.99612 0 0 0.088025" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_4" type="box" size="0.45 0.45 3.4" pos="10.476 56.404 3.4" quat="0.98496 0 0 0.17279" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_5" type="box" size="0.45 0.45 3.4" pos="13.213 59.655 3.4" quat="0.76661 0 0 0.64212" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_6" type="box" size="0.45 0.45 3.4" pos="13.025 61.847 3.4" quat="0.57429 0 0 0.81865" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_7" type="box" size="0.45 0.45 3.4" pos="9.774 64.584 3.4" quat="0.088025 0 0 0.99612" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sutun_8" type="box" size="0.45 0.45 3.4" pos="7.582 64.396 3.4" quat="-0.17279 0 0 0.98496" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_sunak" type="box" size="1.2 0.6 0.5" pos="17.019 60.35 0.5" quat="0.70711 0 0 0.70711" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_mangal_1" type="cylinder" size="0.3 0.5" pos="17.019 62.1 0.5" quat="0.70711 0 0 0.70711" rgba="0.55 0.56 0.58 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_mangal_2" type="cylinder" size="0.3 0.5" pos="16.059 62.1 0.5" quat="0.70711 0 0 0.70711" rgba="0.55 0.56 0.58 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_heykel_1" type="box" size="0.5 0.5 1.5" pos="0.939 64.15 1.5" quat="-0.70711 0 0 0.70711" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <geom name="mekan_oda_004_obje_heykel_2" type="box" size="0.5 0.5 1.5" pos="0.939 55.65 1.5" quat="-0.70711 0 0 0.70711" rgba="0.88 0.86 0.82 1" friction="1 0.005 0.0001"/>
+  <site name="mekan_oda_004_acik_alan" type="cylinder" size="3.5 0.005" pos="9.029 60.4 0.005" rgba="0.2 0.9 0.3 0.15"/>
+  <site name="mekan_oda_004_kapi_giris" type="box" size="1.3 0.25 1.4" pos="9.029 50.75 1.4" rgba="1 0.6 0.1 0.25"/>
+  <site name="mekan_oda_004_kapi_ileri" type="box" size="1.2 0.25 1.6" pos="9.729 70.05 1.6" rgba="1 0.6 0.1 0.25"/>
+</mujocoinclude>

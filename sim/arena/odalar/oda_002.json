@@ -1,0 +1,511 @@
+{
+  "id": "oda_002",
+  "tema": "yıkık sur kapısının ardındaki geçit",
+  "stil": "yosunlu kesme taş, sisli serin hava, yaşlı ağaçlar; terk edilmiş bir dağ kalesi",
+  "aciklama": "Kalın sur duvarının yıkılmış gediğinden girilen dar geçit. Yüksek taş duvarlar gökyüzüne açık.",
+  "boyut": [
+    16.2,
+    12.5,
+    6.0
+  ],
+  "mekan_turu": "kapali",
+  "tavan": false,
+  "zemin": "toprak",
+  "duvar": "tas",
+  "acik_alan": {
+    "merkez": [
+      8.1,
+      6.25
+    ],
+    "yaricap": 3.0
+  },
+  "kapilar": [
+    {
+      "id": "giris",
+      "duvar": "guney",
+      "konum": 0.56,
+      "genislik": 2.6,
+      "yukseklik": 3.0,
+      "hedef": "oda_001",
+      "tur": "gedik"
+    },
+    {
+      "id": "ileri",
+      "duvar": "kuzey",
+      "konum": 0.59,
+      "genislik": 3.0,
+      "yukseklik": 4.0,
+      "hedef": "oda_003",
+      "tur": "kemer"
+    }
+  ],
+  "objeler": [
+    {
+      "id": "moloz_1",
+      "grup": "moloz",
+      "tip": "moloz yığını",
+      "gorunum": "gedikten dökülmüş kesme taş molozu",
+      "sekil": "kure",
+      "boyut": [
+        1.8,
+        1.4,
+        0.9
+      ],
+      "malzeme": "kaya",
+      "donus": 0.0,
+      "yerlesim": {
+        "tur": "kapi_yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "giris",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        6.422,
+        1.06
+      ]
+    },
+    {
+      "id": "moloz_2",
+      "grup": "moloz",
+      "tip": "moloz yığını",
+      "gorunum": "gedikten dökülmüş kesme taş molozu",
+      "sekil": "kure",
+      "boyut": [
+        1.8,
+        1.4,
+        0.9
+      ],
+      "malzeme": "kaya",
+      "donus": 0.0,
+      "yerlesim": {
+        "tur": "kapi_yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "giris",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        11.722,
+        1.06
+      ]
+    },
+    {
+      "id": "tas_blok_1",
+      "grup": "tas_blok",
+      "tip": "devrik sur taşı",
+      "gorunum": "devrik sur taşı",
+      "sekil": "kutu",
+      "boyut": [
+        1.2,
+        0.8,
+        0.8
+      ],
+      "malzeme": "tas",
+      "donus": 270.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        0.597,
+        11.571
+      ]
+    },
+    {
+      "id": "tas_blok_2",
+      "grup": "tas_blok",
+      "tip": "devrik sur taşı",
+      "gorunum": "devrik sur taşı",
+      "sekil": "kutu",
+      "boyut": [
+        1.2,
+        0.8,
+        0.8
+      ],
+      "malzeme": "tas",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        13.685,
+        11.674
+      ]
+    },
+    {
+      "id": "tas_blok_3",
+      "grup": "tas_blok",
+      "tip": "devrik sur taşı",
+      "gorunum": "devrik sur taşı",
+      "sekil": "kutu",
+      "boyut": [
+        1.2,
+        0.8,
+        0.8
+      ],
+      "malzeme": "tas",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        1.227,
+        5.019
+      ]
+    },
+    {
+      "id": "tas_blok_4",
+      "grup": "tas_blok",
+      "tip": "devrik sur taşı",
+      "gorunum": "devrik sur taşı",
+      "sekil": "kutu",
+      "boyut": [
+        1.2,
+        0.8,
+        0.8
+      ],
+      "malzeme": "tas",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        6.791,
+        9.95
+      ]
+    },
+    {
+      "id": "mesale_1",
+      "grup": "mesale",
+      "tip": "duvar meşalesi",
+      "gorunum": "duvar meşalesi",
+      "sekil": "kutu",
+      "boyut": [
+        0.3,
+        0.3,
+        0.6
+      ],
+      "malzeme": "metal",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "kapi_yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "ileri",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 2.2,
+      "konum": [
+        11.658,
+        12.19
+      ]
+    },
+    {
+      "id": "mesale_2",
+      "grup": "mesale",
+      "tip": "duvar meşalesi",
+      "gorunum": "duvar meşalesi",
+      "sekil": "kutu",
+      "boyut": [
+        0.3,
+        0.3,
+        0.6
+      ],
+      "malzeme": "metal",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "kapi_yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "ileri",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 2.2,
+      "konum": [
+        7.458,
+        12.19
+      ]
+    },
+    {
+      "id": "kalkan_rafi",
+      "grup": "kalkan_rafi",
+      "tip": "kırık kalkan rafı",
+      "gorunum": "kırık kalkan rafı",
+      "sekil": "kutu",
+      "boyut": [
+        1.6,
+        0.5,
+        1.6
+      ],
+      "malzeme": "ahsap",
+      "donus": 90.0,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "dogu",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 1.6,
+      "konum": [
+        15.79,
+        5.7
+      ]
+    },
+    {
+      "id": "varil_1",
+      "grup": "varil",
+      "tip": "çürük varil",
+      "gorunum": "çürük varil",
+      "sekil": "silindir",
+      "boyut": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 0.0,
+      "yerlesim": {
+        "tur": "kose",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        15.64,
+        0.56
+      ]
+    },
+    {
+      "id": "varil_2",
+      "grup": "varil",
+      "tip": "çürük varil",
+      "gorunum": "çürük varil",
+      "sekil": "silindir",
+      "boyut": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "malzeme": "ahsap",
+      "donus": 180.0,
+      "yerlesim": {
+        "tur": "kose",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0,
+      "konum": [
+        1.56,
+        11.94
+      ]
+    }
+  ],
+  "isik": {
+    "tip": "gunes",
+    "renk": "#f2ead8",
+    "siddet": 3.2,
+    "ortam": 0.3
+  },
+  "_bolge": "sur",
+  "_yapi_uyarilari": [],
+  "_plan_objeler": [
+    {
+      "id": "moloz",
+      "tip": "moloz yığını",
+      "gorunum": "gedikten dökülmüş kesme taş molozu",
+      "sekil": "kure",
+      "boyut": [
+        1.8,
+        1.4,
+        0.9
+      ],
+      "malzeme": "kaya",
+      "adet": 2,
+      "yerlesim": {
+        "tur": "kapi_yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "giris",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "tas_blok",
+      "tip": "devrik sur taşı",
+      "gorunum": "devrik sur taşı",
+      "sekil": "kutu",
+      "boyut": [
+        1.2,
+        0.8,
+        0.8
+      ],
+      "malzeme": "tas",
+      "adet": 4,
+      "yerlesim": {
+        "tur": "serbest",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "mesale",
+      "tip": "duvar meşalesi",
+      "gorunum": "duvar meşalesi",
+      "sekil": "kutu",
+      "boyut": [
+        0.3,
+        0.3,
+        0.6
+      ],
+      "malzeme": "metal",
+      "adet": 2,
+      "yerlesim": {
+        "tur": "kapi_yaninda",
+        "duvar": null,
+        "kose": null,
+        "hedef": "ileri",
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 2.2
+    },
+    {
+      "id": "kalkan_rafi",
+      "tip": "kırık kalkan rafı",
+      "gorunum": "kırık kalkan rafı",
+      "sekil": "kutu",
+      "boyut": [
+        1.6,
+        0.5,
+        1.6
+      ],
+      "malzeme": "ahsap",
+      "adet": 1,
+      "yerlesim": {
+        "tur": "duvar",
+        "duvar": "dogu",
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    },
+    {
+      "id": "varil",
+      "tip": "çürük varil",
+      "gorunum": "çürük varil",
+      "sekil": "silindir",
+      "boyut": [
+        0.8,
+        0.8,
+        1.0
+      ],
+      "malzeme": "ahsap",
+      "adet": 2,
+      "yerlesim": {
+        "tur": "kose",
+        "duvar": null,
+        "kose": null,
+        "hedef": null,
+        "taraf": null,
+        "oran": null,
+        "bakis": "iceri"
+      },
+      "renk": null,
+      "asili": false,
+      "yerden": 0.0
+    }
+  ],
+  "_uyarilar": [],
+  "_elestiri": []
+}

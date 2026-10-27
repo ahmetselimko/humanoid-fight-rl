@@ -1,0 +1,360 @@
+<!-- KALKMA (getup) ROBOTU — 2026-10-13. dual_humanoid_fight.xml'den turetildi:
+     ayak bilegi MOTORLU (gear 80, aralik +-0.6, yay k=10), ayak 20 cm (yari-boyut 0.10x0.05).
+     Orijinal: motorsuz bilek k=30, 8 cm ayak -> sabit poz bile ~1.8 s'de devriliyordu.
+     Fizibilite: yayp-bilgisayar degerlendirme/bilek_fizibilite.py (motor+20cm itme 0.6 m/s'ye dayaniyor).
+     Aktuator SIRASI: her oyuncunun bilekleri kendi blogunun sonunda (ctrl[:p1_count] = P1).
+     Dovus XML'i ve dovus checkpoint'leri ile UYUMSUZ (aksiyon 10->12).
+     KALCA_Y ALT SINIRI -2.618 (150 derece; 2026-10-13): 120 derecede (-2.0944) oturmadan
+     kalkis fiziksel olarak IMKANSIZDI (bas z 0.37 ustune cikamiyor) - yayp-bilgisayar video
+     referanslari + dovus-5b bagimsiz dogrulama. Eski hali: dual_humanoid_getup_motor_kalca120.xml
+     BAS 0.75 kg (3.05 idi) + GOVDE 9 cm UZUN (kalca baglantisi -0.16 -> -0.25 m) — 2026-10-14:
+     omurga olmadan sirtustu dogrulma imkansizdi (kalca bukulunce govde yerine BACAKLAR kalkiyordu,
+     ust/alt kutle %50/%50). Morfoloji taramasi (degerlendirme/dogrulma_morfoloji.py): ikisi birlikte
+     video dogrulmasini PD takibinde 0/6 -> 5-6/9 yapti; tek basina hicbiri ise yaramadi.
+     Onceki hali: dual_humanoid_getup_motor_govde_eski.xml -->
+<!-- ÜRETİLDİ: degerlendirme/govde2_xml_uret.py (elle düzenleme; betiği değiştir) -->
+<mujoco model="dual_humanoid_fight_phase1">
+  <compiler angle="radian"/>
+
+  <option timestep="0.003" jacobian="sparse" iterations="50"/>
+
+  <default>
+    <joint limited="true" armature="1" damping="1"/>
+    <geom solref="0.002" margin="0.001" material="geom" rgba="0.8 0.6 0.4 1"/>
+    <general ctrllimited="true" ctrlrange="-1 1"/>
+  </default>
+
+  <asset>
+    <texture type="skybox" colorspace="auto" builtin="gradient" rgb1="1 1 1" rgb2="0 0 0" width="100" height="600"/>
+    <texture type="cube" colorspace="auto" name="texgeom" builtin="flat" mark="cross" rgb1="0.8 0.6 0.4" rgb2="0.8 0.6 0.4" markrgb="1 1 1" width="127" height="762"/>
+    <texture type="2d" colorspace="auto" name="texplane" builtin="checker" rgb1="0 0 0" rgb2="0.8 0.8 0.8" width="100" height="100"/>
+    <material name="MatPlane" texture="texplane" texrepeat="60 60" specular="1" shininess="1" reflectance="0.5"/>
+    <material name="geom" texture="texgeom" texuniform="true"/>
+  </asset>
+
+  <!--
+    FAZ 1 HUMANOİD YAPISI (KOL DÜZELTMELERİ):
+    ─────────────────────────────────────────────
+    • Kol geom Y-offsetleri kaldırıldı → düz aşağı hizalandı
+    • Upper arm: half-length 0.12 → 0.08  (radius 0.038 → 0.036)
+    • Forearm  : half-length 0.09 → 0.07  (radius 0.032 → 0.030)
+    • Forearm body: "0 ±0.12 -0.24" → "0 0 -0.18"  (düzgün zincir)
+    • Fist body   : "0 ±0.08 -0.20" → "0 0 -0.16"
+    ─────────────────────────────────────────────
+  -->
+
+  <worldbody>
+    <geom name="floor" size="40 40 40" type="plane" material="MatPlane" rgba="0.8 0.9 0.8 1"/>
+    <light pos="0 0 1.3" dir="0 0 -1" type="directional" cutoff="100" exponent="1" diffuse="1 1 1" specular="0.1 0.1 0.1"/>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--            OYUNCU 1  (Kırmızı)          -->
+    <!-- ═══════════════════════════════════════ -->
+    <body name="p1_torso" pos="0 3 0.85">
+      <joint name="p1_root" type="free" armature="0" damping="0"/>
+
+      <inertial pos="0 0 0" mass="0.05" diaginertia="1e-4 1e-4 1e-4"/>
+      <!-- BEL (2026-10-21, PLAN_EKLEMLER): üst gövde = göğüs + baş + kollar -->
+      <body name="p1_ust_govde" pos="0 0 0">
+        <joint name="p1_bel_z" type="hinge" axis="0 0 1" range="-0.8 0.8" stiffness="15" damping="4" armature="0.5"/>
+        <geom name="p1_torso1" size="0.07 0.10" quat="0.707107 0.707107 0 0" type="capsule" rgba="1 0.2 0.2 1"/>
+        <!-- Head: ayrı body → contact detection çalışsın -->
+        <body name="p1_head" pos="0 0 0.17">
+          <geom name="p1_head_geom" size="0.09" type="sphere" mass="0.75" rgba="1 0.2 0.2 1"/>
+        </body>
+
+        <!-- ── Sağ kol ── -->
+        <body name="p1_right_upper_arm" pos="0 -0.16 0.03">
+          <joint name="p1_shoulder_right" type="hinge" axis="0 1 0"
+                 range="-1.8 0.5" stiffness="15" damping="4" armature="0.5"/>
+          <joint name="p1_shoulder_x_right" type="hinge" axis="1 0 0" range="-1.5 0.3" stiffness="15" damping="4" armature="0.5"/>
+          <!-- Kısaltıldı: half-length 0.12→0.08, y-offset kaldırıldı -->
+          <geom name="p1_right_upper_arm_geom" size="0.036 0.08"
+                pos="0 0 -0.08" type="capsule" rgba="1 0.2 0.2 1"/>
+
+          <body name="p1_forearm_right" pos="0 0 -0.18">
+            <joint name="p1_elbow_right" type="hinge" axis="0 1 0"
+                   range="-2.0 0.1" stiffness="8" damping="3" armature="0.3"/>
+            <!-- Kısaltıldı: half-length 0.09→0.07, y-offset kaldırıldı -->
+            <geom name="p1_forearm_right_geom" size="0.030 0.07"
+                  pos="0 0 -0.07" type="capsule" rgba="1 0.2 0.2 1"/>
+
+            <body name="p1_fist_right" pos="0 0 -0.16">
+              <geom name="p1_fist_right" size="0.042" type="sphere"
+                    rgba="1 0.2 0.2 1"/>
+            </body>
+          </body>
+        </body>
+
+        <!-- ── Sol kol ── -->
+        <body name="p1_left_upper_arm" pos="0 0.16 0.03">
+          <joint name="p1_shoulder_left" type="hinge" axis="0 1 0"
+                 range="-1.8 0.5" stiffness="15" damping="4" armature="0.5"/>
+          <joint name="p1_shoulder_x_left" type="hinge" axis="1 0 0" range="-0.3 1.5" stiffness="15" damping="4" armature="0.5"/>
+          <geom name="p1_left_upper_arm_geom" size="0.036 0.08"
+                pos="0 0 -0.08" type="capsule" rgba="1 0.2 0.2 1"/>
+
+          <body name="p1_forearm_left" pos="0 0 -0.18">
+            <joint name="p1_elbow_left" type="hinge" axis="0 1 0"
+                   range="-2.0 0.1" stiffness="8" damping="3" armature="0.3"/>
+            <geom name="p1_forearm_left_geom" size="0.030 0.07"
+                  pos="0 0 -0.07" type="capsule" rgba="1 0.2 0.2 1"/>
+
+            <body name="p1_fist_left" pos="0 0 -0.16">
+              <geom name="p1_fist_left" size="0.042" type="sphere"
+                    rgba="1 0.2 0.2 1"/>
+            </body>
+          </body>
+        </body>
+
+      </body>
+
+      <!-- ── Sol bacak ── -->
+      <body name="p1_thigh_left" pos="0 -0.09 -0.25">
+        <joint name="p1_hip_x_left" pos="0 0 0" axis="1 0 0"
+               stiffness="15" range="-0.6 0.6" damping="4" armature="0.5"/>
+        <joint name="p1_hip_y_left" pos="0 0 0" axis="0 1 0"
+               stiffness="20" range="-2.618 0.349066" damping="5"/>
+        <!-- KALÇA YAW (2026-10-18, plan: kalca yaw eklemi; 0°=eski robot) -->
+        <joint name="p1_hip_z_left" pos="0 0 0" axis="0 0 1"
+               stiffness="15" range="-0.785 0.785" damping="4" armature="0.5"/>
+        <geom name="p1_thigh_left" size="0.058 0.10" pos="0 0 -0.10" type="capsule" rgba="1 0.2 0.2 1"/>
+
+        <body name="p1_shin_left" pos="0 0 -0.22">
+          <joint name="p1_knee_left" pos="0 0 0" axis="0 -1 0"
+                 stiffness="1" range="-2.79253 -0.0349066"/>
+          <geom name="p1_shin_left" size="0.047 0.09" pos="0 0 -0.09" type="capsule" rgba="1 0.2 0.2 1"/>
+
+          <body name="p1_foot_left" pos="0 0 -0.20">
+            <!-- Pasif ankle: actuate edilmez, yay + sönüm ile stabilize eder -->
+            <joint name="p1_ankle_left" type="hinge" axis="0 1 0"
+                   range="-0.6 0.6" stiffness="10" damping="8" armature="0.2"/>
+            <geom name="p1_foot_left" size="0.1 0.05 0.02"
+                  pos="0.03 0 0" type="box" rgba="1 0.2 0.2 1"/>
+          </body>
+        </body>
+      </body>
+
+      <!-- ── Sağ bacak ── -->
+      <body name="p1_thigh_right" pos="0 0.09 -0.25">
+        <joint name="p1_hip_x_right" pos="0 0 0" axis="1 0 0"
+               stiffness="15" range="-0.6 0.6" damping="4" armature="0.5"/>
+        <joint name="p1_hip_y_right" pos="0 0 0" axis="0 1 0"
+               stiffness="20" range="-2.618 0.349066" damping="5"/>
+        <!-- KALÇA YAW (2026-10-18, plan: kalca yaw eklemi; 0°=eski robot) -->
+        <joint name="p1_hip_z_right" pos="0 0 0" axis="0 0 1"
+               stiffness="15" range="-0.785 0.785" damping="4" armature="0.5"/>
+        <geom name="p1_thigh_right" size="0.058 0.10" pos="0 0 -0.10" type="capsule" rgba="1 0.2 0.2 1"/>
+
+        <body name="p1_shin_right" pos="0 0 -0.22">
+          <joint name="p1_knee_right" pos="0 0 0" axis="0 -1 0"
+                 stiffness="1" range="-2.79253 -0.0349066"/>
+          <geom name="p1_shin_right" size="0.047 0.09" pos="0 0 -0.09" type="capsule" rgba="1 0.2 0.2 1"/>
+
+          <body name="p1_foot_right" pos="0 0 -0.20">
+            <joint name="p1_ankle_right" type="hinge" axis="0 1 0"
+                   range="-0.6 0.6" stiffness="10" damping="8" armature="0.2"/>
+            <geom name="p1_foot_right" size="0.1 0.05 0.02"
+                  pos="0.03 0 0" type="box" rgba="1 0.2 0.2 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--            OYUNCU 2  (Mavi)             -->
+    <!-- ═══════════════════════════════════════ -->
+    <body name="p2_torso" pos="0 -3 0.85">
+      <joint name="p2_root" type="free" armature="0" damping="0"/>
+
+      <inertial pos="0 0 0" mass="0.05" diaginertia="1e-4 1e-4 1e-4"/>
+      <!-- BEL (2026-10-21, PLAN_EKLEMLER): üst gövde = göğüs + baş + kollar -->
+      <body name="p2_ust_govde" pos="0 0 0">
+        <joint name="p2_bel_z" type="hinge" axis="0 0 1" range="-0.8 0.8" stiffness="15" damping="4" armature="0.5"/>
+        <geom name="p2_torso1" size="0.07 0.10" quat="0.707107 0.707107 0 0" type="capsule" rgba="0.2 0.2 1 1"/>
+        <body name="p2_head" pos="0 0 0.17">
+          <geom name="p2_head_geom" size="0.09" type="sphere" mass="0.75" rgba="0.2 0.2 1 1"/>
+        </body>
+
+        <!-- ── Sağ kol ── -->
+        <body name="p2_right_upper_arm" pos="0 -0.16 0.03">
+          <joint name="p2_shoulder_right" type="hinge" axis="0 1 0"
+                 range="-1.8 0.5" stiffness="15" damping="4" armature="0.5"/>
+          <joint name="p2_shoulder_x_right" type="hinge" axis="1 0 0" range="-1.5 0.3" stiffness="15" damping="4" armature="0.5"/>
+          <geom name="p2_right_upper_arm_geom" size="0.036 0.08"
+                pos="0 0 -0.08" type="capsule" rgba="0.2 0.2 1 1"/>
+
+          <body name="p2_forearm_right" pos="0 0 -0.18">
+            <joint name="p2_elbow_right" type="hinge" axis="0 1 0"
+                   range="-2.0 0.1" stiffness="8" damping="3" armature="0.3"/>
+            <geom name="p2_forearm_right_geom" size="0.030 0.07"
+                  pos="0 0 -0.07" type="capsule" rgba="0.2 0.2 1 1"/>
+
+            <body name="p2_fist_right" pos="0 0 -0.16">
+              <geom name="p2_fist_right" size="0.042" type="sphere"
+                    rgba="0.2 0.2 1 1"/>
+            </body>
+          </body>
+        </body>
+
+        <!-- ── Sol kol ── -->
+        <body name="p2_left_upper_arm" pos="0 0.16 0.03">
+          <joint name="p2_shoulder_left" type="hinge" axis="0 1 0"
+                 range="-1.8 0.5" stiffness="15" damping="4" armature="0.5"/>
+          <joint name="p2_shoulder_x_left" type="hinge" axis="1 0 0" range="-0.3 1.5" stiffness="15" damping="4" armature="0.5"/>
+          <geom name="p2_left_upper_arm_geom" size="0.036 0.08"
+                pos="0 0 -0.08" type="capsule" rgba="0.2 0.2 1 1"/>
+
+          <body name="p2_forearm_left" pos="0 0 -0.18">
+            <joint name="p2_elbow_left" type="hinge" axis="0 1 0"
+                   range="-2.0 0.1" stiffness="8" damping="3" armature="0.3"/>
+            <geom name="p2_forearm_left_geom" size="0.030 0.07"
+                  pos="0 0 -0.07" type="capsule" rgba="0.2 0.2 1 1"/>
+
+            <body name="p2_fist_left" pos="0 0 -0.16">
+              <geom name="p2_fist_left" size="0.042" type="sphere"
+                    rgba="0.2 0.2 1 1"/>
+            </body>
+          </body>
+        </body>
+
+      </body>
+
+      <!-- ── Sol bacak ── -->
+      <body name="p2_thigh_left" pos="0 -0.09 -0.25">
+        <joint name="p2_hip_x_left" pos="0 0 0" axis="1 0 0"
+               stiffness="15" range="-0.6 0.6" damping="4" armature="0.5"/>
+        <joint name="p2_hip_y_left" pos="0 0 0" axis="0 1 0"
+               stiffness="20" range="-2.618 0.349066" damping="5"/>
+        <!-- KALÇA YAW (2026-10-18, plan: kalca yaw eklemi; 0°=eski robot) -->
+        <joint name="p2_hip_z_left" pos="0 0 0" axis="0 0 1"
+               stiffness="15" range="-0.785 0.785" damping="4" armature="0.5"/>
+        <geom name="p2_thigh_left" size="0.058 0.10" pos="0 0 -0.10" type="capsule" rgba="0.2 0.2 1 1"/>
+
+        <body name="p2_shin_left" pos="0 0 -0.22">
+          <joint name="p2_knee_left" pos="0 0 0" axis="0 -1 0"
+                 stiffness="1" range="-2.79253 -0.0349066"/>
+          <geom name="p2_shin_left" size="0.047 0.09" pos="0 0 -0.09" type="capsule" rgba="0.2 0.2 1 1"/>
+
+          <body name="p2_foot_left" pos="0 0 -0.20">
+            <joint name="p2_ankle_left" type="hinge" axis="0 1 0"
+                   range="-0.6 0.6" stiffness="10" damping="8" armature="0.2"/>
+            <geom name="p2_foot_left" size="0.1 0.05 0.02"
+                  pos="0.03 0 0" type="box" rgba="0.2 0.2 1 1"/>
+          </body>
+        </body>
+      </body>
+
+      <!-- ── Sağ bacak ── -->
+      <body name="p2_thigh_right" pos="0 0.09 -0.25">
+        <joint name="p2_hip_x_right" pos="0 0 0" axis="1 0 0"
+               stiffness="15" range="-0.6 0.6" damping="4" armature="0.5"/>
+        <joint name="p2_hip_y_right" pos="0 0 0" axis="0 1 0"
+               stiffness="20" range="-2.618 0.349066" damping="5"/>
+        <!-- KALÇA YAW (2026-10-18, plan: kalca yaw eklemi; 0°=eski robot) -->
+        <joint name="p2_hip_z_right" pos="0 0 0" axis="0 0 1"
+               stiffness="15" range="-0.785 0.785" damping="4" armature="0.5"/>
+        <geom name="p2_thigh_right" size="0.058 0.10" pos="0 0 -0.10" type="capsule" rgba="0.2 0.2 1 1"/>
+
+        <body name="p2_shin_right" pos="0 0 -0.22">
+          <joint name="p2_knee_right" pos="0 0 0" axis="0 -1 0"
+                 stiffness="1" range="-2.79253 -0.0349066"/>
+          <geom name="p2_shin_right" size="0.047 0.09" pos="0 0 -0.09" type="capsule" rgba="0.2 0.2 1 1"/>
+
+          <body name="p2_foot_right" pos="0 0 -0.20">
+            <joint name="p2_ankle_right" type="hinge" axis="0 1 0"
+                   range="-0.6 0.6" stiffness="10" damping="8" armature="0.2"/>
+            <geom name="p2_foot_right" size="0.1 0.05 0.02"
+                  pos="0.03 0 0" type="box" rgba="0.2 0.2 1 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!--  Self-collision excludes                        -->
+  <!-- ─────────────────────────────────────────────── -->
+  <contact>
+    <!-- P1 ayak bileği self-collision -->
+    <exclude body1="p1_shin_left"  body2="p1_foot_left"/>
+    <exclude body1="p1_shin_right" body2="p1_foot_right"/>
+    <exclude body1="p2_shin_left"  body2="p2_foot_left"/>
+    <exclude body1="p2_shin_right" body2="p2_foot_right"/>
+    <!-- Head-torso self-collision -->
+    <exclude body1="p1_torso" body2="p1_head"/>
+    <exclude body1="p2_torso" body2="p2_head"/>
+    <!-- P1 kol -->
+    <exclude body1="p1_torso"           body2="p1_right_upper_arm"/>
+    <exclude body1="p1_torso"           body2="p1_left_upper_arm"/>
+    <exclude body1="p1_right_upper_arm" body2="p1_forearm_right"/>
+    <exclude body1="p1_left_upper_arm"  body2="p1_forearm_left"/>
+    <exclude body1="p1_forearm_right"   body2="p1_fist_right"/>
+    <exclude body1="p1_forearm_left"    body2="p1_fist_left"/>
+
+    <!-- P2 kol -->
+    <exclude body1="p2_torso"           body2="p2_right_upper_arm"/>
+    <exclude body1="p2_torso"           body2="p2_left_upper_arm"/>
+    <exclude body1="p2_right_upper_arm" body2="p2_forearm_right"/>
+    <exclude body1="p2_left_upper_arm"  body2="p2_forearm_left"/>
+    <exclude body1="p2_forearm_right"   body2="p2_fist_right"/>
+    <exclude body1="p2_forearm_left"    body2="p2_fist_left"/>
+  </contact>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!--  Actuators: 8 kol + 12 bacak = 20 (ankle pasif — actuator yok)  -->
+  <!-- ─────────────────────────────────────────────── -->
+  <!--
+    ACTUATOR TABLOSU (16 toplam, 8/oyuncu):
+    ─────────────────────────────────────────────────
+    Kol   : shoulder ×2, elbow ×2   gear 150/100  (öncekiyle aynı)
+    Bacak : hip_y    ×2, knee  ×2   gear 200/150  (yeni eklendi)
+    ─────────────────────────────────────────────────
+    Hip gear=200 : kalça, ağırlık merkezini taşıdığından daha fazla tork
+    Knee gear=150: diz, kalçadan az ama kollardan fazla
+  -->
+  <actuator>
+    <!-- P1 kol -->
+    <general name="p1_shoulder_right" joint="p1_shoulder_right" gear="150 0 0 0 0 0"/>
+    <general name="p1_elbow_right"    joint="p1_elbow_right"    gear="100 0 0 0 0 0"/>
+    <general name="p1_shoulder_left"  joint="p1_shoulder_left"  gear="150 0 0 0 0 0"/>
+    <general name="p1_elbow_left"     joint="p1_elbow_left"     gear="100 0 0 0 0 0"/>
+
+    <!-- P1 bacak -->
+    <general name="p1_hip_x_left"     joint="p1_hip_x_left"     gear="120 0 0 0 0 0"/>
+    <general name="p1_hip_y_left"     joint="p1_hip_y_left"     gear="200 0 0 0 0 0"/>
+    <general name="p1_knee_left"      joint="p1_knee_left"      gear="150 0 0 0 0 0"/>
+    <general name="p1_hip_x_right"    joint="p1_hip_x_right"    gear="120 0 0 0 0 0"/>
+    <general name="p1_hip_y_right"    joint="p1_hip_y_right"    gear="200 0 0 0 0 0"/>
+    <general name="p1_knee_right"     joint="p1_knee_right"     gear="150 0 0 0 0 0"/>
+    <general name="p1_ankle_left"     joint="p1_ankle_left"     gear="80 0 0 0 0 0"/>
+    <general name="p1_ankle_right"    joint="p1_ankle_right"    gear="80 0 0 0 0 0"/>
+    <general name="p1_hip_z_left"     joint="p1_hip_z_left"     gear="120 0 0 0 0 0"/>
+    <general name="p1_hip_z_right"    joint="p1_hip_z_right"    gear="120 0 0 0 0 0"/>
+    <general name="p1_bel_z"            joint="p1_bel_z"            gear="150 0 0 0 0 0"/>
+    <general name="p1_shoulder_x_left"  joint="p1_shoulder_x_left"  gear="120 0 0 0 0 0"/>
+    <general name="p1_shoulder_x_right" joint="p1_shoulder_x_right" gear="120 0 0 0 0 0"/>
+
+    <!-- P2 kol -->
+    <general name="p2_shoulder_right" joint="p2_shoulder_right" gear="150 0 0 0 0 0"/>
+    <general name="p2_elbow_right"    joint="p2_elbow_right"    gear="100 0 0 0 0 0"/>
+    <general name="p2_shoulder_left"  joint="p2_shoulder_left"  gear="150 0 0 0 0 0"/>
+    <general name="p2_elbow_left"     joint="p2_elbow_left"     gear="100 0 0 0 0 0"/>
+
+    <!-- P2 bacak -->
+    <general name="p2_hip_x_left"     joint="p2_hip_x_left"     gear="120 0 0 0 0 0"/>
+    <general name="p2_hip_y_left"     joint="p2_hip_y_left"     gear="200 0 0 0 0 0"/>
+    <general name="p2_knee_left"      joint="p2_knee_left"      gear="150 0 0 0 0 0"/>
+    <general name="p2_hip_x_right"    joint="p2_hip_x_right"    gear="120 0 0 0 0 0"/>
+    <general name="p2_hip_y_right"    joint="p2_hip_y_right"    gear="200 0 0 0 0 0"/>
+    <general name="p2_knee_right"     joint="p2_knee_right"     gear="150 0 0 0 0 0"/>
+    <general name="p2_ankle_left"     joint="p2_ankle_left"     gear="80 0 0 0 0 0"/>
+    <general name="p2_ankle_right"    joint="p2_ankle_right"    gear="80 0 0 0 0 0"/>
+    <general name="p2_hip_z_left"     joint="p2_hip_z_left"     gear="120 0 0 0 0 0"/>
+    <general name="p2_hip_z_right"    joint="p2_hip_z_right"    gear="120 0 0 0 0 0"/>
+    <general name="p2_bel_z"            joint="p2_bel_z"            gear="150 0 0 0 0 0"/>
+    <general name="p2_shoulder_x_left"  joint="p2_shoulder_x_left"  gear="120 0 0 0 0 0"/>
+    <general name="p2_shoulder_x_right" joint="p2_shoulder_x_right" gear="120 0 0 0 0 0"/>
+  </actuator>
+
+</mujoco>
